@@ -12,6 +12,16 @@ WHITE="\x1B[37m"
 BOLD="\x1B[1m"
 RESET="\x1B[0m"
 
+# help command
+
+help() {
+  printf "${BOLD}${GREEN}[!]${RESET} Welcome to ${BOLD}${CYAN}flags${RESET}! View all commands:\n"
+  printf "flags -usa\n"
+  printf "flags -es\n"
+  printf "flags -it\n"
+  printf "flags -fr\n"
+}
+
 # italy flag
 
 italy() {
@@ -39,7 +49,7 @@ spain() {
   printf "${BOLD}${RED}██████████████████${RESET}\n"
 }
 
-# french flag 
+# france flag 
 
 france() {
   printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
@@ -48,7 +58,30 @@ france() {
   printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
 }
 
+# portugal flag
+
+portugal() {
+  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${RED}████████████${RESET}\n"
+  printf "${BOLD}${GREEN}███${RESET}${BOLD}${YELLOW}███${RESET}${BOLD}${RED}████████████${RESET}\n"
+  printf "${BOLD}${GREEN}███${RESET}${BOLD}${YELLOW}███${RESET}${BOLD}${RED}████████████${RESET}\n"
+  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${RED}████████████${RESET}\n"
+}
+
+# austria flag
+
+austria() {
+  printf "${BOLD}${RED}██████████████████${RESET}\n"
+  printf "${BOLD}${WHITE}██████████████████${RESET}\n"
+  printf "${BOLD}${RED}██████████████████${RESET}\n"
+}
+
 # cmds
+
+if [ "$1" = "-h" ] 
+  then
+    help
+    exit 0
+fi
 
 if [ "$1" = "-it" ]
   then
@@ -73,3 +106,19 @@ if [ "$1" = "-fr" ]
     france
     exit 0
 fi
+
+if [ "$1" = "-pt" ] 
+  then
+    portugal
+    exit 0
+fi
+
+if [ "$1" = "-at" ]
+  then
+    austria
+    exit 0
+fi
+
+# responding flags
+
+printf "${BOLD}${GREEN}[!]${RESET} Hello! Welcome to ${BOLD}${CYAN}flags${RESET}, use ${BOLD}${CYAN}flags -h${RESET} to view all commands.\n"
