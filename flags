@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+
+# colors variables
+
+GREEN="\x1B[32m"
+YELLOW="\x1B[33m"
+YELLOW_BRIGHT="\x1B[93m"
+BLUE="\x1B[34m"
+CYAN="\x1B[36m"
+RED="\x1B[31m"
+WHITE="\x1B[37m"
+BOLD="\x1B[1m"
+RESET="\x1B[0m"
+
+# italy flag
+
+italy() {
+  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+}
+
+# usa flag
+
+usa() {
+  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${RED}████████████${RESET}\n"
+  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}████████████${RESET}\n"
+  printf "${BOLD}${RED}██████████████████${RESET}\n"
+  printf "${BOLD}${WHITE}██████████████████${RESET}\n"
+}
+
+# spain flag
+
+spain() {
+  printf "${BOLD}${RED}██████████████████${RESET}\n"
+  printf "${BOLD}${WHITE}██${RESET}${BOLD}${YELLOW}████████████████${RESET}\n"
+  printf "${BOLD}${YELLOW}██████████████████${RESET}\n"
+  printf "${BOLD}${RED}██████████████████${RESET}\n"
+}
+
+# french flag 
+
+france() {
+  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+}
+
+# cmds
+
+if [ "$1" = "-it" ]
+  then
+      italy
+      exit 0
+fi
+
+if [ "$1" = "-usa" ]
+then
+  usa
+  exit 0
+fi
+
+if [ "$1" = "-es" ] 
+  then
+    spain
+    exit 0
+fi
+
+if [ "$1" = "-fr" ]
+  then
+    france
+    exit 0
+fi

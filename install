@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+RED="\x1B[31m"
+BOLD="\x1B[1m"
+RESET="\x1B[0m"
+GREEN="\x1B[32m"
+
+FILE="flags"
+
+if [[ ! -f "./$FILE" ]]; then
+    printf "${BOLD}${RED}[X]${RESET} The 'flags' script does not exist.\n"
+    exit
+fi
+
+sudo cp ./$FILE /usr/bin
+
+printf "${BOLD}${RED}[!]${RESET} Installation complete. Run the 'flags' command.\n"
