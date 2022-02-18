@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+# colors variables
+
+GREEN="\x1B[32m"
+YELLOW="\x1B[33m"
+YELLOW_BRIGHT="\x1B[93m"
+BLUE="\x1B[34m"
+CYAN="\x1B[36m"
+RED="\x1B[31m"
+WHITE="\x1B[37m"
+BOLD="\x1B[1m"
+RESET="\x1B[0m"
+
 # help command
 
 help() {
@@ -27,7 +39,7 @@ update() {
     mkdir -p "$HOME/.local/share/"
   fi
 
-  curl "https://raw.githubusercontent.com/talwat/flags/main/flagdata.sh" --output "$HOME/.local/share/flagdata.sh"
+  curl -s "https://raw.githubusercontent.com/talwat/flags/main/flagdata.sh" --output "$HOME/.local/share/flagdata.sh"
 }
 
 # check for flagdata and if not found run update() to download it
@@ -48,14 +60,14 @@ do
       exit 0
     ;;
     -upd)
+      echo -e "${BOLD}${CYAN}[!]${RESET} Updating flag list, please wait."
       update
       exit 0
     ;;
     -*)
       getflag "$var"
     ;;
-    *)
-      echo -e "${BOLD}${GREEN}[!]${RESET} Hello! Welcome to ${BOLD}${CYAN}flags${RESET}, use ${BOLD}${CYAN}flags -h${RESET} to view all commands."
-    ;;
   esac
-done 
+done
+
+echo -e "${BOLD}${GREEN}[!]${RESET} Hello! Welcome to ${BOLD}${CYAN}flags${RESET}, use ${BOLD}${CYAN}flags -h${RESET} to view all commands."

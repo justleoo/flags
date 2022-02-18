@@ -1,17 +1,5 @@
 #!/usr/bin/env bash
 
-# colors variables
-
-GREEN="\x1B[32m"
-YELLOW="\x1B[33m"
-YELLOW_BRIGHT="\x1B[93m"
-BLUE="\x1B[34m"
-CYAN="\x1B[36m"
-RED="\x1B[31m"
-WHITE="\x1B[37m"
-BOLD="\x1B[1m"
-RESET="\x1B[0m"
-
 # get function from user input
 
 getflag() {
@@ -42,6 +30,7 @@ getflag() {
     ;;
     -*)
       echo -e "${BOLD}${RED}[!]${RESET} Flag not found."
+      exit 1
     ;;
   esac
 }
