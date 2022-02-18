@@ -9,6 +9,8 @@ BLUE="\x1B[34m"
 CYAN="\x1B[36m"
 RED="\x1B[31m"
 WHITE="\x1B[37m"
+ORANGE="\e[33m"
+BLACK="\e[90"
 BOLD="\x1B[1m"
 RESET="\x1B[0m"
 
@@ -16,21 +18,39 @@ RESET="\x1B[0m"
 
 help() {
   echo -e "${BOLD}${GREEN}[!]${RESET} Welcome to ${BOLD}${CYAN}flags${RESET}! View all commands:"
-
-  echo "Other Commands"
+  
+  echo "Commands"
   echo "flags -h      Displays this menu."
   echo "flags -upd    Downloads the newest flags from the github repo."
+  echo "flags -l      List all flags."
 
-  echo "Flag Commands"
-  echo "flags -usa    Flag of USA."
-  echo "flags -es     Flag of Spain."
-  echo "flags -it     Flag of Italy."
-  echo "flags -fr     Flag of France."
-  echo "flags -pl     Flag of Poland."
-  echo "flags -hu     Flag of Hungary."
-  echo -e "flags -pt     Flag of Portugal ${BOLD}${RED}[WIP]${RESET}\n"
 }
 
+
+# list flags
+
+list() {
+  echo "List of flags"
+  echo "flags -at     Flag of Austria."
+  echo "flags -bg     Flag of Bulgaria."
+  echo "flags -cz     Flag of the Czech Republic."
+  echo "flags -dk     Flag of Denmark."
+  echo "flags -ff     Flag of Finland."
+  echo "flags -fr     Flag of France."
+  echo "flags -gr     Flag of Greece."
+  echo "flags -ie     Flag of Ireland."
+  echo "flags -it     Flag of Italy."
+  echo "flags -lv     Flag of Latvia."
+  echo "flags -lt     Flag of Lithuania."
+  echo "flags -pl     Flag of Poland."
+  echo "flags -pt     Flag of Portugal."
+  echo "flags -ro     Flag of Romania."
+  echo "flags -es     Flag of Spain."
+  echo "flags -se     Flag of Sweden."
+  echo "flags -ch     Flag of Switzerland."
+  echo "flags -usa    Flag of the USA."
+}
+  
 # download flags data from the github repo. this allows more flags to be added without any work from the users
 
 update() {
@@ -65,6 +85,10 @@ do
     -upd)
       echo -e "${BOLD}${CYAN}[!]${RESET} Updating flag list, please wait."
       update
+      exit 0
+    ;;
+    -l)
+      list
       exit 0
     ;;
     -*)
