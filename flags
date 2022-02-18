@@ -10,7 +10,7 @@ CYAN="\x1B[36m"
 RED="\x1B[31m"
 WHITE="\x1B[37m"
 ORANGE="\e[33m"
-BLACK="\e[90"
+BLACK="\e[30m"
 BOLD="\x1B[1m"
 RESET="\x1B[0m"
 
@@ -30,13 +30,15 @@ help() {
 # list flags
 
 list() {
-  echo "List of flags"
+  echo -e "---------${RESET}${BOLD}${RED} List of flags ${RESET}---------"
   echo "flags -at     Flag of Austria."
+  echo "flags -be     Flag of Belgium."
   echo "flags -bg     Flag of Bulgaria."
   echo "flags -cz     Flag of the Czech Republic."
   echo "flags -dk     Flag of Denmark."
   echo "flags -ff     Flag of Finland."
   echo "flags -fr     Flag of France."
+  echo "flags -de     Flag of Germany."
   echo "flags -gr     Flag of Greece."
   echo "flags -ie     Flag of Ireland."
   echo "flags -it     Flag of Italy."
