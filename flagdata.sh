@@ -92,6 +92,14 @@ getflag() {
       estonia
       exit 0
     ;;
+    -be)
+      belgium
+      exit 0
+    ;;
+    -de)
+      germany
+      exit 0
+    ;;
     -*)
       echo -e "${BOLD}${RED}[!]${RESET} Flag not found."
       exit 1
@@ -296,4 +304,21 @@ estonia() {
     echo -e "${BOLD}${BLUE}██████████████████${RESET}"
     echo -e "${BOLD}${BLACK}██████████████████${RESET}"
     echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+}
+
+# german flag
+
+germany() {
+    echo -e "${BOLD}${BLACK}██████████████████${RESET}"
+    echo -e "${BOLD}${RED}██████████████████${RESET}"
+    echo -e "${BOLD}${YELLOW}██████████████████${RESET}"
+}
+
+# belgian flag
+
+belgium() {
+  echo -e "${BOLD}${BLACK}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
+  echo -e "${BOLD}${BLACK}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
+  echo -e "${BOLD}${BLACK}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
+  echo -e "${BOLD}${BLACK}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
 }
