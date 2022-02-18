@@ -15,110 +15,59 @@ RESET="\x1B[0m"
 # help command
 
 help() {
-  printf "${BOLD}${GREEN}[!]${RESET} Welcome to ${BOLD}${CYAN}flags${RESET}! View all commands:\n"
-  printf "flags -usa\n"
-  printf "flags -es\n"
-  printf "flags -it\n"
-  printf "flags -fr\n"
+  echo -e "${BOLD}${GREEN}[!]${RESET} Welcome to ${BOLD}${CYAN}flags${RESET}! View all commands:"
+  
+  echo "Other Commands"
+  echo "flags -h      Displays this menu."
+  echo "flags -upd    Downloads the newest flags from the github repo."
+
+  echo "Flag Commands"
+  echo "flags -usa    Flag of USA."
+  echo "flags -es     Flag of Spain."
+  echo "flags -it     Flag of Italy."
+  echo "flags -fr     Flag of France."
 }
 
-# italy flag
+# download flags data from the github repo. this allows more flags to be added without any work from the users
 
-italy() {
-  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
-  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
-  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
-  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
+update() {
+  if [ -f "$HOME/.local/share/flagdata.sh" ]; then
+    rm "$HOME/.local/share/flagdata.sh"
+  fi
+
+  if [ ! -d "$HOME/.local/share/" ]; then
+    mkdir -p "$HOME/.local/share/"
+  fi
+
+  curl -s "https://raw.githubusercontent.com/justleoo/flags/main/flagdata.sh" --output "$HOME/.local/share/flagdata.sh"
 }
 
-# usa flag
+# check for flagdata and if not found run update() to download it
 
-usa() {
-  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${RED}████████████${RESET}\n"
-  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}████████████${RESET}\n"
-  printf "${BOLD}${RED}██████████████████${RESET}\n"
-  printf "${BOLD}${WHITE}██████████████████${RESET}\n"
-}
+if [ ! -f "$HOME/.local/share/flagdata.sh" ]; then
+  update
+fi
 
-# spain flag
-
-spain() {
-  printf "${BOLD}${RED}██████████████████${RESET}\n"
-  printf "${BOLD}${WHITE}██${RESET}${BOLD}${YELLOW}████████████████${RESET}\n"
-  printf "${BOLD}${YELLOW}██████████████████${RESET}\n"
-  printf "${BOLD}${RED}██████████████████${RESET}\n"
-}
-
-# france flag 
-
-france() {
-  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
-  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
-  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
-  printf "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}\n"
-}
-
-# portugal flag
-
-portugal() {
-  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${RED}████████████${RESET}\n"
-  printf "${BOLD}${GREEN}███${RESET}${BOLD}${YELLOW}███${RESET}${BOLD}${RED}████████████${RESET}\n"
-  printf "${BOLD}${GREEN}███${RESET}${BOLD}${YELLOW}███${RESET}${BOLD}${RED}████████████${RESET}\n"
-  printf "${BOLD}${GREEN}██████${RESET}${BOLD}${RED}████████████${RESET}\n"
-}
-
-# austria flag
-
-austria() {
-  printf "${BOLD}${RED}██████████████████${RESET}\n"
-  printf "${BOLD}${WHITE}██████████████████${RESET}\n"
-  printf "${BOLD}${RED}██████████████████${RESET}\n"
-}
+source "$HOME/.local/share/flagdata.sh"
 
 # cmds
 
-if [ "$1" = "-h" ] 
-  then
-    help
-    exit 0
-fi
-
-if [ "$1" = "-it" ]
-  then
-      italy
+for var in "$@"
+do
+  case $var in
+    -h)
+      help
       exit 0
-fi
+    ;;
+    -upd)
+      echo -e "${BOLD}${CYAN}[!]${RESET} Updating flag list, please wait."
+      update
+      exit 0
+    ;;
+    -*)
+      getflag "$var"
+    ;;
+  esac
+done
 
-if [ "$1" = "-usa" ]
-then
-  usa
-  exit 0
-fi
-
-if [ "$1" = "-es" ] 
-  then
-    spain
-    exit 0
-fi
-
-if [ "$1" = "-fr" ]
-  then
-    france
-    exit 0
-fi
-
-if [ "$1" = "-pt" ] 
-  then
-    portugal
-    exit 0
-fi
-
-if [ "$1" = "-at" ]
-  then
-    austria
-    exit 0
-fi
-
-# responding flags
-
-printf "${BOLD}${GREEN}[!]${RESET} Hello! Welcome to ${BOLD}${CYAN}flags${RESET}, use ${BOLD}${CYAN}flags -h${RESET} to view all commands.\n"
+echo -e "${BOLD}${GREEN}[!]${RESET} Hello! Welcome to ${BOLD}${CYAN}flags${RESET}, use ${BOLD}${CYAN}flags -h${RESET} to view all commands."

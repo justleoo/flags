@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+RED="\x1B[31m"
+BOLD="\x1B[1m"
+RESET="\x1B[0m"
+GREEN="\x1B[32m"
+CYAN="\x1B[36m"
+
+rm /usr/bin/flags
+echo -e "${BOLD}${GREEN}[!]${RESET} Done."
+echo -e "${BOLD}${CYAN}[!]${RESET} Please run ${CYAN}${BOLD}rm ~/.local/share/flagdata.sh${RESET} as a normal user to also remove the flag data."

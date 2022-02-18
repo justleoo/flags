@@ -10,6 +10,7 @@ show country flags on your terminal easily
 git clone https://github.com/justleoo/flags/
 cd flags
 chmod +x ./install
+sudo ./install
 flags
 ```
 
