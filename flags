@@ -50,6 +50,7 @@ list() {
   echo "flags -es     Flag of Spain."
   echo "flags -se     Flag of Sweden."
   echo "flags -ch     Flag of Switzerland."
+  echo "flags -tw     Flag of Taiwan."
   echo "flags -usa    Flag of the USA."
 }
   

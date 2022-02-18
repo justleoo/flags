@@ -100,6 +100,10 @@ getflag() {
       germany
       exit 0
     ;;
+    -tw)
+      taiwan
+      exit 0
+    ;;
     -*)
       echo -e "${BOLD}${RED}[!]${RESET} Flag not found."
       exit 1
@@ -323,4 +327,12 @@ belgium() {
   echo -e "${BOLD}${BLACK}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
 }
 
+# taiwan flag
 
+taiwan() {
+  echo -e "${BOLD}${BLUE}████████${RESET}${BOLD}${RED}██████████${RESET}"
+  echo -e "${BOLD}${BLUE}███${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${BLUE}███${RESET}${BOLD}${RED}██████████${RESET}"
+  echo -e "${BOLD}${BLUE}████████${RESET}${BOLD}${RED}██████████${RESET}"
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
+}
