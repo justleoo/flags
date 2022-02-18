@@ -26,4 +26,5 @@ done, use `flags -h` command
 ### contribuiting 
 
 `1.` fork this repository
+
 `2.` make your changes, and open a pull request
