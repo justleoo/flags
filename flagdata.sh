@@ -31,6 +31,10 @@ getflag() {
     -at)
       austria
       exit 0
+      ;;
+    -hu)
+      hungary
+      exit 0
     ;;
     -*)
       echo -e "${BOLD}${RED}[!]${RESET} Flag not found."
@@ -66,7 +70,7 @@ spain() {
   echo -e "${BOLD}${RED}██████████████████${RESET}"
 }
 
-# france flag 
+# france flag
 
 france() {
   echo -e "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}"
@@ -98,4 +102,11 @@ poland() {
   echo -e "${BOLD}${WHITE}██████████████████${RESET}"
   echo -e "${BOLD}${RED}██████████████████${RESET}"
   echo -e "${BOLD}${RED}██████████████████${RESET}"
+}
+
+# hungarian flag
+hungary() {
+    echo -e "${BOLD}${RED}██████████████████${RESET}"
+    echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+    echo -e "${BOLD}${GREEN}██████████████████${RESET}"
 }
