@@ -30,7 +30,7 @@ help() {
 # list flags
 
 list() {
-  echo -e "---------${RESET}${BOLD}${RED} List of flags ${RESET}---------"
+  echo -e "${RESET}${BOLD}${RED} List of flags ${RESET}"
   echo "flags -at     Flag of Austria."
   echo "flags -be     Flag of Belgium."
   echo "flags -bg     Flag of Bulgaria."
