@@ -322,3 +322,5 @@ belgium() {
   echo -e "${BOLD}${BLACK}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
   echo -e "${BOLD}${BLACK}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
 }
+
+
