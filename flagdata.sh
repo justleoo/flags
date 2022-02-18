@@ -31,9 +31,65 @@ getflag() {
     -at)
       austria
       exit 0
-      ;;
+    ;;
     -hu)
       hungary
+      exit 0
+    ;;
+    -ru)
+      russia
+      exit 0
+    ;;
+    -bg)
+      bulgaria
+      exit 0
+    ;;
+    -ua)
+      ukraine
+      exit 0
+    ;;
+    -ff)
+      finland
+      exit 0
+    ;;
+    -dk)
+      denmark
+      exit 0
+    ;;
+    -se)
+      sweden
+      exit 0
+    ;;
+    -ch)
+      switzerland
+      exit 0
+    ;;
+    -ro)
+      romania
+      exit 0
+    ;;
+    -lv)
+      latvia
+      exit 0
+    ;;
+    -lt)
+      lithuania
+      exit 0
+    ;;
+    -cz)
+      czechia
+      exit 0
+    ;;
+    -gr)
+      greece
+      exit 0
+    ;;
+    -ie)
+      ireland
+      exit 0
+    ;;
+    -ee)
+      estonia
       exit 0
     ;;
     -*)
@@ -43,7 +99,7 @@ getflag() {
   esac
 }
 
-# italy flag
+# italian flag
 
 italy() {
   echo -e "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}"
@@ -61,7 +117,7 @@ usa() {
   echo -e "${BOLD}${WHITE}██████████████████${RESET}"
 }
 
-# spain flag
+# spanish flag
 
 spain() {
   echo -e "${BOLD}${RED}██████████████████${RESET}"
@@ -70,7 +126,7 @@ spain() {
   echo -e "${BOLD}${RED}██████████████████${RESET}"
 }
 
-# france flag
+# french flag
 
 france() {
   echo -e "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}"
@@ -79,7 +135,7 @@ france() {
   echo -e "${BOLD}${BLUE}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██████${RESET}"
 }
 
-# portugal flag
+# portugese flag
 
 portugal() {
   echo -e "${BOLD}${GREEN}██████${RESET}${BOLD}${RED}████████████${RESET}"
@@ -88,7 +144,7 @@ portugal() {
   echo -e "${BOLD}${GREEN}██████${RESET}${BOLD}${RED}████████████${RESET}"
 }
 
-# austria flag
+# austrian flag
 
 austria() {
   echo -e "${BOLD}${RED}██████████████████${RESET}"
@@ -97,6 +153,7 @@ austria() {
 }
 
 # polish flag
+
 poland() {
   echo -e "${BOLD}${WHITE}██████████████████${RESET}"
   echo -e "${BOLD}${WHITE}██████████████████${RESET}"
@@ -105,8 +162,138 @@ poland() {
 }
 
 # hungarian flag
+
 hungary() {
     echo -e "${BOLD}${RED}██████████████████${RESET}"
     echo -e "${BOLD}${WHITE}██████████████████${RESET}"
     echo -e "${BOLD}${GREEN}██████████████████${RESET}"
+}
+
+# russian flag
+
+russia() {
+    echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+    echo -e "${BOLD}${BLUE}██████████████████${RESET}"
+    echo -e "${BOLD}${RED}██████████████████${RESET}"
+}
+
+# bulgarian flag
+
+bulgaria() {
+    echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+    echo -e "${BOLD}${GREEN}██████████████████${RESET}"
+    echo -e "${BOLD}${RED}██████████████████${RESET}"
+}
+
+# ukrainian flag
+
+ukraine() {
+    echo -e "${BOLD}${BLUE}██████████████████${RESET}"
+    echo -e "${BOLD}${BLUE}██████████████████${RESET}"
+    echo -e "${BOLD}${YELLOW}██████████████████${RESET}"
+    echo -e "${BOLD}${YELLOW}██████████████████${RESET}"
+}
+
+# finnish flag
+
+finland() {
+    echo -e "${BOLD}${WHITE}████${RESET}${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}████████████"
+    echo -e "${BOLD}${WHITE}████${RESET}${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}████████████"
+    echo -e "${BOLD}${BLUE}██████████████████"
+    echo -e "${BOLD}${WHITE}████${RESET}${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}████████████"
+    echo -e "${BOLD}${WHITE}████${RESET}${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}████████████"
+}
+
+# danish flag
+
+denmark() {
+    echo -e "${BOLD}${RED}████${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${RED}████████████"
+    echo -e "${BOLD}${RED}████${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${RED}████████████"
+    echo -e "${BOLD}${WHITE}██████████████████"
+    echo -e "${BOLD}${RED}████${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${RED}████████████"
+    echo -e "${BOLD}${RED}████${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${RED}████████████"
+}
+
+# swedish flag
+
+sweden() {
+    echo -e "${BOLD}${BLUE}████${RESET}${BOLD}${YELLOW}██${RESET}${BOLD}${BLUE}████████████"
+    echo -e "${BOLD}${BLUE}████${RESET}${BOLD}${YELLOW}██${RESET}${BOLD}${BLUE}████████████"
+    echo -e "${BOLD}${YELLOW}██████████████████"
+    echo -e "${BOLD}${BLUE}████${RESET}${BOLD}${YELLOW}██${RESET}${BOLD}${BLUE}████████████"
+    echo -e "${BOLD}${BLUE}████${RESET}${BOLD}${YELLOW}██${RESET}${BOLD}${BLUE}████████████"
+}
+
+# swiss flag
+
+switzerland () {
+    echo -e "${BOLD}${RED}██████████${RESET}"
+    echo -e "${BOLD}${RED}████${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${RED}████${RESET}"
+    echo -e "${BOLD}${RED}██${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${RED}██${RESET}"
+    echo -e "${BOLD}${RED}████${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${RED}████${RESET}"
+    echo -e "${BOLD}${RED}██████████${RESET}"
+}
+
+# romanian flag
+
+romania() {
+  echo -e "${BOLD}${BLUE}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
+  echo -e "${BOLD}${BLUE}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
+  echo -e "${BOLD}${BLUE}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
+  echo -e "${BOLD}${BLUE}██████${RESET}${BOLD}${YELLOW}██████${RESET}${BOLD}${RED}██████${RESET}"
+}
+
+# latvian flag
+
+latvia() {
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
+  echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
+}
+
+# lithuanian flag
+
+lithuania() {
+    echo -e "${BOLD}${YELLOW}██████████████████${RESET}"
+    echo -e "${BOLD}${GREEN}██████████████████${RESET}"
+    echo -e "${BOLD}${RED}██████████████████${RESET}"
+}
+
+# czech flag
+
+czechia() {
+  echo -e "${BOLD}${BLUE}██${BOLD}${WHITE}████████████████${RESET}"
+  echo -e "${BOLD}${BLUE}████${BOLD}${WHITE}██████████████${RESET}"
+  echo -e "${BOLD}${BLUE}██████${BOLD}${RED}████████████${RESET}"
+  echo -e "${BOLD}${BLUE}████${BOLD}${RED}██████████████${RESET}"
+  echo -e "${BOLD}${BLUE}██${BOLD}${RED}████████████████${RESET}"
+}
+
+# greek flag
+
+greece() {
+  echo -e "${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}████████████${RESET}"
+  echo -e "${BOLD}${WHITE}██████${RESET}${BOLD}${BLUE}████████████${RESET}"
+  echo -e "${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}██${RESET}${BOLD}${BLUE}██${RESET}${BOLD}${WHITE}████████████${RESET}"
+  echo -e "${BOLD}${BLUE}██████████████████${RESET}"
+  echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+}
+
+# irish flag
+
+ireland() {
+  echo -e "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${ORANGE}██████${RESET}"
+  echo -e "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${ORANGE}██████${RESET}"
+  echo -e "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${ORANGE}██████${RESET}"
+  echo -e "${BOLD}${GREEN}██████${RESET}${BOLD}${WHITE}██████${RESET}${BOLD}${ORANGE}██████${RESET}"
+}
+
+# estonian flag
+
+estonia() {
+    echo -e "${BOLD}${BLUE}██████████████████${RESET}"
+    echo -e "${BOLD}${BLACK}██████████████████${RESET}"
+    echo -e "${BOLD}${WHITE}██████████████████${RESET}"
 }
