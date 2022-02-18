@@ -26,6 +26,7 @@ help() {
   echo "flags -es     Flag of Spain."
   echo "flags -it     Flag of Italy."
   echo "flags -fr     Flag of France."
+  echo "flags -pl     Flag of Poland."
 }
 
 # download flags data from the github repo. this allows more flags to be added without any work from the users
