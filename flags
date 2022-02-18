@@ -39,7 +39,7 @@ update() {
     mkdir -p "$HOME/.local/share/"
   fi
 
-  curl -s "https://raw.githubusercontent.com/talwat/flags/main/flagdata.sh" --output "$HOME/.local/share/flagdata.sh"
+  curl -s "https://raw.githubusercontent.com/justleoo/flags/main/flagdata.sh" --output "$HOME/.local/share/flagdata.sh"
 }
 
 # check for flagdata and if not found run update() to download it
