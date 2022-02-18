@@ -24,6 +24,10 @@ getflag() {
       portugal
       exit 0
     ;;
+    -pl)
+      poland
+      exit 0
+    ;;
     -at)
       austria
       exit 0
@@ -85,5 +89,13 @@ portugal() {
 austria() {
   echo -e "${BOLD}${RED}██████████████████${RESET}"
   echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
+}
+
+# polish flag
+poland() {
+  echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+  echo -e "${BOLD}${WHITE}██████████████████${RESET}"
+  echo -e "${BOLD}${RED}██████████████████${RESET}"
   echo -e "${BOLD}${RED}██████████████████${RESET}"
 }
