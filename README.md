@@ -22,3 +22,8 @@ done, use `flags -h` command
 <a href="https://github.com/justleoo/flags/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=justleoo/flags" />
 </a>
+
+### contribuiting 
+
+`1.` fork this repository
+`2.` make your changes, and open a pull request

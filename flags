@@ -16,7 +16,7 @@ RESET="\x1B[0m"
 
 help() {
   echo -e "${BOLD}${GREEN}[!]${RESET} Welcome to ${BOLD}${CYAN}flags${RESET}! View all commands:"
-  
+
   echo "Other Commands"
   echo "flags -h      Displays this menu."
   echo "flags -upd    Downloads the newest flags from the github repo."
@@ -27,6 +27,8 @@ help() {
   echo "flags -it     Flag of Italy."
   echo "flags -fr     Flag of France."
   echo "flags -pl     Flag of Poland."
+  echo "flags -hu     Flag of Hungary."
+  echo -e "flags -pt     Flag of Portugal ${BOLD}${RED}[WIP]${RESET}\n"
 }
 
 # download flags data from the github repo. this allows more flags to be added without any work from the users
